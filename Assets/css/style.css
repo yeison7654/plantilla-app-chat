@@ -16,8 +16,8 @@
     --color-sextiary: #bb8fce;
     --color-black: black;
     --color-white: white;
-    --color-white-smoke: #f5f5f5;
-    --color-gray: gray;
+    --color-white-smoke: #fcfcfc;
+    --color-gray: #ebebeb;
     --color-gray-light: #bfbebe;
     --color-gray-extra-light: #eaeaea;
     --font-size: 17px;
@@ -126,13 +126,6 @@ body {
 }
 
 /*Estilos login*/
-.box-login {
-    width: 30rem;
-    background: var(--color-white-smoke);
-    border-radius: 0.5rem;
-    margin: 10rem auto 0 auto;
-    box-shadow: 0rem 0rem 0.5rem var(--color-black);
-}
 
 .login-header {
     width: 100%;
@@ -208,6 +201,7 @@ body {
     transition: all 500ms ease-in-out;
     color: var(--color-quatiary);
     font-size: 1.2rem;
+    border-radius: 0.1rem;
 }
 
 .input>input:focus {
@@ -233,6 +227,7 @@ body {
     background: var(--color-quatiary);
     cursor: pointer;
     transition: all 400ms ease-in-out;
+    border-radius: 0.1rem;
 }
 
 .button>button:hover {
@@ -240,17 +235,84 @@ body {
     box-shadow: 0rem 0rem 0.5rem var(--color-quatiary);
 }
 
+/*estilos del chat*/
+.box-chat {
+    width: 95%;
+    height: 90%;
+    background: var(--color-white-smoke);
+    border-radius: 0.2rem;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: row;
+}
+.chat-list{
+    width: 25%;
+    height: 100%;
+    background-color: #6c3483;
+}
+
 /*Moviles pequeños*/
-@media only screen and (max-width:480px) {}
+@media only screen and (max-width:480px) {
+
+    /*estilos login*/
+    .box-login {
+        width: 20rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.5rem;
+        margin: 5rem auto 0 auto;
+        box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+
+}
 
 /*Moviles grandes y tabletas*/
-@media only screen and (min-width:481px) and (max-width:767px) {}
+@media only screen and (min-width:481px) and (max-width:767px) {
+
+    /*estilos login*/
+    .box-login {
+        width: 26rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.5rem;
+        margin: 10rem auto 0 auto;
+        box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+}
 
 /*Tabletas y dispositivos medianos*/
-@media only screen and (min-width:768px) and (max-width:1024px) {}
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+    /*estilos login*/
+    .box-login {
+        width: 26rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.5rem;
+        margin: 10rem auto 0 auto;
+        box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+}
 
 /*PC´s pequeños y laptops*/
-@media only screen and (min-width:1025px) and (max-width:1200px) {}
+@media only screen and (min-width:1025px) and (max-width:1200px) {
+
+    /*estilos login*/
+    .box-login {
+        width: 26rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.5rem;
+        margin: 10rem auto 0 auto;
+        box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+}
 
 /*PC´s grandes y monitores*/
-@media only screen and (min-width:1201px) {}
+@media only screen and (min-width:1201px) {
+
+    /*estilos login*/
+    .box-login {
+        width: 26rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.5rem;
+        margin: 10rem auto 0 auto;
+        box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+}
