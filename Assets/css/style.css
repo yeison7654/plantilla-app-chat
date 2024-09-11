@@ -70,7 +70,7 @@ body {
     position: absolute;
     width: 10rem;
     transition: all 1s ease-in-out;
-    animation: correr 10s infinite linear;
+    animation: correr 2s infinite linear;
 }
 
 @keyframes spin {
