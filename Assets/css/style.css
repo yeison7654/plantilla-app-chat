@@ -20,6 +20,7 @@
     --color-gray: #ebebeb;
     --color-gray-light: #bfbebe;
     --color-gray-extra-light: #eaeaea;
+    --color-green: #0c940c;
     --font-size: 17px;
 }
 
@@ -236,19 +237,158 @@ body {
 }
 
 /*estilos del chat*/
-.box-chat {
-    width: 95%;
-    height: 90%;
-    background: var(--color-white-smoke);
-    border-radius: 0.2rem;
-    margin: 3rem auto;
+
+.list-head {
+    width: 100%;
+    background: var(--color-primary);
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 0.2rem;
+    height: 5rem;
 }
-.chat-list{
-    width: 25%;
+
+.list-foot {
+    background: var(--color-primary);
+    height: 5rem;
+    border-bottom-left-radius: 0.2rem;
+    padding: 0.7rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.list-body {
     height: 100%;
-    background-color: #6c3483;
+    overflow-x: auto;
+}
+
+.btn-config,
+.btn-exit {
+    color: var(--color-white-smoke);
+}
+
+.head-titles {
+    text-align: center;
+    color: var(--color-white-smoke);
+}
+
+.user-chat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.9rem;
+    transition: background 250ms ease-in;
+}
+
+.user-chat:hover {
+    background: var(--color-gray-extra-light);
+}
+
+.user-body-list {
+    width: 100%;
+}
+
+.user-head-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-ultimate-msj {
+    color: var(--color-gray-light);
+}
+
+.color-primary {
+    color: var(--color-primary);
+}
+
+.foot-form-search {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/*Estilos conversaciones*/
+.chat-message-list {
+    width: 100%;
+    height: 100%;
+    background: var(--color-gray-extra-light);
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-head-message {
+    width: 100%;
+    background: var(--color-primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    height: 5rem;
+    border-top-right-radius: 0.2rem;
+    gap: 1.5rem;
+}
+
+.box-user-message {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-user-message>img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.btn-back {
+    color: var(--color-white-smoke);
+}
+
+.btn-back>i {
+    font-size: 1.5rem;
+}
+
+.user-message-title {
+    color: var(--color-white-smoke);
+    font-weight: 700;
+}
+
+.user-message-online {
+    color: var(--color-white-smoke);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-message-online>i {
+    font-size: 0.6rem;
+    color: var(--color-green);
+}
+
+.chat-body-message {
+    height: 100%;
+    width: 100%;
+}
+
+.chat-foot-message {
+    height: 6rem;
+    width: 100%;
+    background: var(--color-primary);
 }
 
 /*Moviles pequeños*/
@@ -261,6 +401,11 @@ body {
         border-radius: 0.5rem;
         margin: 5rem auto 0 auto;
         box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+
+    /*oculta elementos*/
+    .hidden-movil {
+        display: none !important;
     }
 
 }
@@ -276,6 +421,11 @@ body {
         margin: 10rem auto 0 auto;
         box-shadow: 0rem 0rem 0.5rem var(--color-black);
     }
+
+    /*oculta elementos*/
+    .hidden-movil {
+        display: none !important;
+    }
 }
 
 /*Tabletas y dispositivos medianos*/
@@ -288,6 +438,101 @@ body {
         border-radius: 0.5rem;
         margin: 10rem auto 0 auto;
         box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+
+    /*Estilos chat*/
+    /*
+    chat-list
+    */
+    .chat-list {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-chat {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-config>i,
+    .btn-exit>i {
+        font-size: 1rem;
+    }
+
+    .user-chat>img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+    }
+
+    .title-user {
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+
+    .date-user {
+        color: var(--color-gray-light);
+        font-size: 0.6rem;
+    }
+
+    .title-status {
+        font-size: 0.6rem;
+        font-style: oblique;
+    }
+
+    .user-ultimate-msj {
+        font-size: 0.7rem;
+    }
+
+    .list-foot {
+        gap: 1rem;
+    }
+
+    .input-search {
+        height: 2rem;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 0.5rem;
+        background: var(--color-white-smoke);
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+
+    .input-search::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .btn-search {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+        cursor: pointer;
+
+    }
+
+    .btn-new-message {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        cursor: pointer;
     }
 }
 
@@ -302,10 +547,105 @@ body {
         margin: 10rem auto 0 auto;
         box-shadow: 0rem 0rem 0.5rem var(--color-black);
     }
+
+    /*Estilos chat*/
+    /*
+    chat-list
+    */
+    .chat-list {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-chat {
+        width: 95%;
+        height: 35rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        margin: 3rem auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-config>i,
+    .btn-exit>i {
+        font-size: 1rem;
+    }
+
+    .user-chat>img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+    }
+
+    .title-user {
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+
+    .date-user {
+        color: var(--color-gray-light);
+        font-size: 0.6rem;
+    }
+
+    .title-status {
+        font-size: 0.6rem;
+        font-style: oblique;
+    }
+
+    .user-ultimate-msj {
+        font-size: 0.7rem;
+    }
+
+    .list-foot {
+        gap: 1rem;
+    }
+
+    .input-search {
+        height: 2rem;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 0.5rem;
+        background: var(--color-white-smoke);
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+
+    .input-search::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .btn-search {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+        cursor: pointer;
+
+    }
+
+    .btn-new-message {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
 }
 
 /*PC´s grandes y monitores*/
-@media only screen and (min-width:1201px) {
+@media only screen and (min-width:1201px) and (max-width: 1500px) {
 
     /*estilos login*/
     .box-login {
@@ -314,5 +654,276 @@ body {
         border-radius: 0.5rem;
         margin: 10rem auto 0 auto;
         box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+
+    /*Estilos chat*/
+    /*
+    chat-list
+    */
+    .chat-list {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-chat {
+        width: 95%;
+        height: 42rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        margin: 3rem auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-config>i,
+    .btn-exit>i {
+        font-size: 1.2rem;
+    }
+
+    .user-chat>img {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 100%;
+    }
+
+    .title-user {
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+
+    .date-user {
+        color: var(--color-gray-light);
+        font-size: 0.7rem;
+    }
+
+    .title-status {
+        font-size: 0.7rem;
+        font-style: oblique;
+    }
+
+    .input-search {
+        height: 2rem;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 0.5rem;
+        background: var(--color-white-smoke);
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+
+    .btn-search {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+        cursor: pointer;
+
+    }
+
+    .btn-new-message {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
+}
+
+/*PC's grandes y monitores grandes xxl*/
+@media only screen and (min-width:1501px) and (max-width:1900px) {
+
+    /*estilos login*/
+    .box-login {
+        width: 26rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.5rem;
+        margin: 10rem auto 0 auto;
+        box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+
+    /*Estilos chat*/
+    /*
+    chat-list
+    */
+    .chat-list {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-chat {
+        width: 95%;
+        height: 45rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        margin: 3rem auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-config>i,
+    .btn-exit>i {
+        font-size: 1.5rem;
+    }
+
+    .user-chat>img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+    }
+
+    .title-user {
+        font-weight: 700;
+    }
+
+    .date-user {
+        color: var(--color-gray-light);
+        font-size: 0.7rem;
+    }
+
+    .title-status {
+        font-size: 0.7rem;
+        font-style: oblique;
+    }
+
+    .input-search {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 0.5rem;
+        background: var(--color-white-smoke);
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+
+    .btn-search {
+        border: none;
+        outline: none;
+        height: 2.2rem;
+        width: 2.2rem;
+        background: var(--color-white-smoke);
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+        cursor: pointer;
+
+    }
+
+    .btn-new-message {
+        border: none;
+        outline: none;
+        height: 2.2rem;
+        width: 2.2rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
+}
+
+/*Monitores extra grandes*/
+@media only screen and (min-width:1901px) {
+
+    /*estilos login*/
+    .box-login {
+        width: 26rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.5rem;
+        margin: 10rem auto 0 auto;
+        box-shadow: 0rem 0rem 0.5rem var(--color-black);
+    }
+
+    /*Estilos chat*/
+    /*
+    chat-list
+    */
+    .chat-list {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-chat {
+        width: 95%;
+        height: 50rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        margin: 3rem auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-config>i,
+    .btn-exit>i {
+        font-size: 1.5rem;
+    }
+
+    .user-chat>img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+    }
+
+    .title-user {
+        font-weight: 700;
+    }
+
+    .date-user {
+        color: var(--color-gray-light);
+        font-size: 0.7rem;
+    }
+
+    .title-status {
+        font-size: 0.7rem;
+        font-style: oblique;
+    }
+
+    .input-search {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 0.5rem;
+        background: var(--color-white-smoke);
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+
+    .btn-search {
+        border: none;
+        outline: none;
+        height: 2.2rem;
+        width: 2.2rem;
+        background: var(--color-white-smoke);
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+        cursor: pointer;
+
+    }
+
+    .btn-new-message {
+        border: none;
+        outline: none;
+        height: 2.2rem;
+        width: 2.2rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        cursor: pointer;
     }
 }
