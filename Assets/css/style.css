@@ -252,7 +252,7 @@ body {
 
 .list-foot {
     background: var(--color-primary);
-    height: 5rem;
+    height: 6rem;
     border-bottom-left-radius: 0.2rem;
     padding: 0.7rem 1rem;
     display: flex;
@@ -383,12 +383,86 @@ body {
 .chat-body-message {
     height: 100%;
     width: 100%;
+    overflow-x: auto;
+    padding: 2rem 2.5rem 0 2.5rem;
+}
+
+.message-user {
+    background: var(--color-quatiary);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 60%;
+    padding: 1rem;
+    color: var(--color-white-smoke);
+    margin-bottom: 1.5rem;
+}
+
+.message-me {
+    background: var(--color-white);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    width: 60%;
+    padding: 1rem;
+    color: var(--color-primary);
+    margin: 0 0 1.5rem auto;
+}
+
+.message-head {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.message-foot {
+    font-size: 0.7rem;
+    font-style: oblique;
+    text-align: right;
+    color: var(--color-gray-light);
 }
 
 .chat-foot-message {
     height: 6rem;
     width: 100%;
+    padding: 0.7rem 1rem;
     background: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
+
+.chat-foot-message>form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-message {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.btn-send {
+    height: 100%;
+    width: 3rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-send>i {
+    color: var(--color-white);
+    font-size: 1.2rem;
 }
 
 /*Moviles pequeños*/
@@ -406,6 +480,101 @@ body {
     /*oculta elementos*/
     .hidden-movil {
         display: none !important;
+    }
+
+  /*Estilos chat*/
+    /*
+    chat-list
+    */
+    .chat-list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-chat {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-config>i,
+    .btn-exit>i {
+        font-size: 1rem;
+    }
+
+    .user-chat>img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+    }
+
+    .title-user {
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+
+    .date-user {
+        color: var(--color-gray-light);
+        font-size: 0.6rem;
+    }
+
+    .title-status {
+        font-size: 0.6rem;
+        font-style: oblique;
+    }
+
+    .user-ultimate-msj {
+        font-size: 0.7rem;
+    }
+
+    .list-foot {
+        gap: 1rem;
+    }
+
+    .input-search {
+        height: 2rem;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 0.5rem;
+        background: var(--color-white-smoke);
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+
+    .input-search::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .btn-search {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+        cursor: pointer;
+
+    }
+
+    .btn-new-message {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        cursor: pointer;
     }
 
 }
@@ -426,6 +595,102 @@ body {
     .hidden-movil {
         display: none !important;
     }
+
+  /*Estilos chat*/
+    /*
+    chat-list
+    */
+    .chat-list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-chat {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-config>i,
+    .btn-exit>i {
+        font-size: 1rem;
+    }
+
+    .user-chat>img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+    }
+
+    .title-user {
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+
+    .date-user {
+        color: var(--color-gray-light);
+        font-size: 0.6rem;
+    }
+
+    .title-status {
+        font-size: 0.6rem;
+        font-style: oblique;
+    }
+
+    .user-ultimate-msj {
+        font-size: 0.7rem;
+    }
+
+    .list-foot {
+        gap: 1rem;
+    }
+
+    .input-search {
+        height: 2rem;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 0.5rem;
+        background: var(--color-white-smoke);
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+
+    .input-search::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .btn-search {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+        cursor: pointer;
+
+    }
+
+    .btn-new-message {
+        border: none;
+        outline: none;
+        height: 2rem;
+        width: 2rem;
+        background: var(--color-white-smoke);
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
+
 }
 
 /*Tabletas y dispositivos medianos*/
